@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar-container"
+  >
+    <div
+      class="navbar-brand"
+    >
+      Expensify
+    </div>
+    <div>
+      <ul
+        class="navbar-links"
+      >
+        <li>
+          About
+        </li>
+        <li>
+          Contact
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div
+    class="container"
+  >
+    <h4>
+      Your Balance as of 2022-10-12
+    </h4>
+    <h1>
+      $ 2350.00
+    </h1>
+    <div
+      class="inc-exp-container"
+    >
+      <div>
+        <h4>
+          Income
+        </h4>
+        <p
+          class="money plus"
+        >
+          $ 7000
+        </p>
+      </div>
+      <div>
+        <h4>
+          Expense
+        </h4>
+        <p
+          class="money minus"
+        >
+          $ 4650
+        </p>
+      </div>
+    </div>
+    <h3>
+      History
+    </h3>
+    <ul
+      class="list"
+      id="list"
+    >
+      <li
+        class="minus"
+      >
+        Groceries 
+        <span>
+          - $200
+        </span>
+        <button
+          class="delete-btn"
+        >
+          X
+        </button>
+      </li>
+      <li
+        class="minus"
+      >
+        Cooking Class 
+        <span>
+          - $150
+        </span>
+        <button
+          class="delete-btn"
+        >
+          X
+        </button>
+      </li>
+      <li
+        class="plus"
+      >
+        Freelance 
+        <span>
+          + $7000
+        </span>
+        <button
+          class="delete-btn"
+        >
+          X
+        </button>
+      </li>
+      <li
+        class="minus"
+      >
+        Macbook Air 
+        <span>
+          - $1700
+        </span>
+        <button
+          class="delete-btn"
+        >
+          X
+        </button>
+      </li>
+      <li
+        class="minus"
+      >
+        Rent 
+        <span>
+          - $2600
+        </span>
+        <button
+          class="delete-btn"
+        >
+          X
+        </button>
+      </li>
+    </ul>
+    <h3>
+      Add new transaction
+    </h3>
+    <form>
+      <div
+        class="form-control"
+      >
+        <label
+          for="text"
+        >
+          Activity
+        </label>
+        <input
+          id="text"
+          name="text"
+          placeholder="Enter activity..."
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="form-control"
+      >
+        <label
+          for="amount"
+        >
+          Amount (negative - expense, positive - income)
+        </label>
+        <input
+          id="amount"
+          name="amount"
+          placeholder="Enter amount..."
+          type="number"
+          value=""
+        />
+      </div>
+      <button
+        class="btn"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

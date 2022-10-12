@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IncomeExpenses component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="inc-exp-container"
+  >
+    <div>
+      <h4>
+        Income
+      </h4>
+      <p
+        class="money plus"
+      >
+        $ 7000
+      </p>
+    </div>
+    <div>
+      <h4>
+        Expense
+      </h4>
+      <p
+        class="money minus"
+      >
+        $ 4650
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,31 @@
+.navbar-container {
+    width: 100vw; 
+    height: 55px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: sticky; 
+    top: 0; 
+    z-index: 3; 
+    background-color: #fff; 
+    color: #000; 
+    padding: 0 30px; 
+    transition: all 1s ease; 
+}
+
+.navbar-brand {
+    font-family: "Poppins", sans-serif; 
+    font-weight: 400; 
+    font-size: 23px; 
+}
+
+.navbar-links {
+    display: flex; 
+    gap: 1em;
+    list-style: none; 
+}
+
+.navbar-links li:hover {
+    color: #4c9e9e; 
+    transition: 0.3s ease; 
+}

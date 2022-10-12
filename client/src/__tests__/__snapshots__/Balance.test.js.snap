@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Balance component matches snapshot 1`] = `
+<DocumentFragment>
+  <h4>
+    Your Balance as of 2022-10-12
+  </h4>
+  <h1>
+    $ 2350.00
+  </h1>
+</DocumentFragment>
+`;
