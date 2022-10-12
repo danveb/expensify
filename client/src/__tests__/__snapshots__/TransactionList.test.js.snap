@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionList component matches snapshot 1`] = `
+<DocumentFragment>
+  <h3>
+    History
+  </h3>
+  <ul
+    class="list"
+    id="list"
+  >
+    <li
+      class="minus"
+    >
+      Groceries 
+      <span>
+        - $200
+      </span>
+      <button
+        class="delete-btn"
+      >
+        X
+      </button>
+    </li>
+    <li
+      class="minus"
+    >
+      Cooking Class 
+      <span>
+        - $150
+      </span>
+      <button
+        class="delete-btn"
+      >
+        X
+      </button>
+    </li>
+    <li
+      class="plus"
+    >
+      Freelance 
+      <span>
+        + $7000
+      </span>
+      <button
+        class="delete-btn"
+      >
+        X
+      </button>
+    </li>
+    <li
+      class="minus"
+    >
+      Macbook Air 
+      <span>
+        - $1700
+      </span>
+      <button
+        class="delete-btn"
+      >
+        X
+      </button>
+    </li>
+    <li
+      class="minus"
+    >
+      Rent 
+      <span>
+        - $2600
+      </span>
+      <button
+        class="delete-btn"
+      >
+        X
+      </button>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

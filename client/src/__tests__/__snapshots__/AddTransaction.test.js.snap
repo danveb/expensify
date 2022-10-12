@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTransaction component matches snapshot 1`] = `
+<DocumentFragment>
+  <h3>
+    Add new transaction
+  </h3>
+  <form>
+    <div
+      class="form-control"
+    >
+      <label
+        for="text"
+      >
+        Activity
+      </label>
+      <input
+        id="text"
+        name="text"
+        placeholder="Enter activity..."
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="form-control"
+    >
+      <label
+        for="amount"
+      >
+        Amount (negative - expense, positive - income)
+      </label>
+      <input
+        id="amount"
+        name="amount"
+        placeholder="Enter amount..."
+        type="number"
+        value=""
+      />
+    </div>
+    <button
+      class="btn"
+    >
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;

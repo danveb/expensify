@@ -1,7 +1,6 @@
 import { render } from "@testing-library/react";
 import TransactionList from "../components/TransactionList"; 
 import Transaction from "../components/Transaction"; 
-import { GlobalProvider } from "../context/GlobalState";
 
 describe("Transaction component", () => {
     // smoke test
