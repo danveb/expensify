@@ -5,7 +5,7 @@ const AddTransaction = () => {
     // useState for formData (controlled component for component-level state)
     const [formData, setFormData] = useState({
         text: "", 
-        amount: "",
+        amount: 0,
     }); 
     // destructure formData to be used as values 
     const { text, amount } = formData; 
@@ -25,7 +25,7 @@ const AddTransaction = () => {
     const resetForm = () => {
         setFormData({
             text: "", 
-            amount: "", 
+            amount: 0, 
         });
     };
 
@@ -33,8 +33,8 @@ const AddTransaction = () => {
     const handleSubmit = (e) => {
         e.preventDefault(); 
         const newTransaction = {
-            id: Math.floor(Math.random() * 100000000),
-            text: text, 
+            // id: Math.floor(Math.random() * 100000000),
+            text, 
             amount: +amount, // parsing as number
         }; 
         addTransaction(newTransaction); 

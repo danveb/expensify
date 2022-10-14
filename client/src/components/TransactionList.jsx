@@ -1,6 +1,5 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { GlobalContext } from "../context/GlobalState"; 
-import axios from "axios";
 import Transaction from "./Transaction";
 
 const TransactionList = () => {

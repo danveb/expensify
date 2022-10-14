@@ -12,6 +12,6 @@ CREATE TABLE transactions(
 ); 
 
 INSERT INTO transactions(text, amount) 
-VALUES('COOK', -125), ('FREELANCE', 6000); 
+VALUES('Freelance', 3000), ('Groceries', -150), ('iPhone replacement', -990), ('Mechanical keyboard', 250), ('Weekly gathering', -300); 
 
 -- push to PSQL: $ psql < database.sql

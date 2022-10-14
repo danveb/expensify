@@ -22,7 +22,7 @@ const getTransactions = async (req, res, next) => {
 const addTransaction = async (req, res, next) => {
     try {
         const { text, amount } = req.body; 
-        const transaction = await pool.query(`INSERT INTO transactions (text, amount) VALUES ($1, $2) RETURNING text, amount`, [text, amount]); 
+        const transaction = await pool.query(`INSERT INTO transactions (text, amount) VALUES ($1, $2) RETURNING id, text, amount`, [text, amount]); 
         res.status(201).json(transaction.rows); 
     } catch(error) {
         next(error); 

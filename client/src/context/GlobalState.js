@@ -52,12 +52,11 @@ export const GlobalContext = createContext(INITIAL_STATE);
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, INITIAL_STATE);
 
-    // actions 
-    // async from backend
+    // actions -> asynchronously to work with backend 
     const getTransactions = async () => {
         try {
             const response = await axios.get("/api/v1/transactions"); 
-            console.log(response.data); 
+            // console.log(response.data); 
             dispatch({
                 type: "GET_TRANSACTIONS", 
                 payload: response.data, 
@@ -70,18 +69,40 @@ export const GlobalProvider = ({ children }) => {
         };
     };
 
-    const deleteTransaction = (id) => {
-        dispatch({
-            type: "DELETE_TRANSACTION", 
-            payload: id, 
-        }); 
+    const deleteTransaction = async (id) => {
+        try {
+            await axios.delete(`/api/v1/transactions/${id}`); 
+            dispatch({
+                type: "DELETE_TRANSACTION", 
+                payload: id, 
+            }); 
+        } catch(error) {
+            dispatch({
+                type: "TRANSACTION_ERROR", 
+                payload: error.response.data, 
+            });
+        };
     };
 
-    const addTransaction = (transaction) => {
-        dispatch({
-            type: "ADD_TRANSACTION", 
-            payload: transaction, 
-        });
+    const addTransaction = async (transaction) => {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json', 
+            },
+        };
+        try {
+            const response = await axios.post("/api/v1/transactions", transaction, config); 
+            // console.log(response.data[0]); 
+            dispatch({
+                type: "ADD_TRANSACTION", 
+                payload: response.data[0], 
+            });
+        } catch(error) {
+            dispatch({
+                type: "TRANSACTION_ERROR", 
+                payload: error.response.data, 
+            });
+        };
     };
 
     return (
