@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import IncomeExpenses from "../components/IncomeExpenses"; 
 
 describe("IncomeExpenses component", () => {
@@ -15,15 +15,17 @@ describe("IncomeExpenses component", () => {
 
     // getByText
     test("should display income text", () => {
-        const { getByText } = render(<IncomeExpenses />); 
-        const text = getByText("Income", { exact: true }); 
+        render(<IncomeExpenses />); 
+        const text = screen.getByText("Income", { exact: true }); 
         expect(text).toBeInTheDocument(); 
     });
 
     // getByText
     test("should display expense text", () => {
-        const { getByText } = render(<IncomeExpenses />); 
-        const text = getByText("Expense", { exact: true }); 
+        render(<IncomeExpenses />); 
+        const text = screen.getByText("Expense", { exact: true }); 
         expect(text).toBeInTheDocument(); 
     });
 });
+
+// needs work; jest failing

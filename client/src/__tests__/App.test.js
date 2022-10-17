@@ -3,7 +3,7 @@ import App from "../App";
 
 describe("App component", () => {
     // smoke test
-    test("renders App component", () => {
+    test("renders App component", async () => {
         render(<App />); 
     });
 
@@ -13,3 +13,5 @@ describe("App component", () => {
         expect(asFragment()).toMatchSnapshot(); 
     });
 });
+
+// needs work; jest failing

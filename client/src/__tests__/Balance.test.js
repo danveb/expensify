@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Balance from "../components/Balance"; 
 
 describe("Balance component", () => {
@@ -16,15 +16,17 @@ describe("Balance component", () => {
     // getByText
     test("displays correct date", () => {
         const date = new Date().toISOString().split("T")[0]; 
-        const { getByText } = render(<Balance />); 
-        const text = getByText(`Your Balance as of ${date}`, { exact: true }); 
+        render(<Balance />); 
+        const text = screen.getByText(`Your Balance as of ${date}`, { exact: true }); 
         expect(text).toBeInTheDocument(); 
     });
 
     // getByText
     test("displays correct total", () => {
-        const { getByText } = render(<Balance />); 
-        const totalBalance = getByText(`$`, { exact: false }); 
+        render(<Balance />); 
+        const totalBalance = screen.getByText(`$`, { exact: false }); 
         expect(totalBalance).toBeInTheDocument(); 
     });
 });
+
+// needs work; jest failing
